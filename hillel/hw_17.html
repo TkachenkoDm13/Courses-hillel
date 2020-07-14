@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <script>
+        // ЗАДАНИЯ ДЛЯ РАЗМИНКИ!!!!!!)))
+
+        
+        //1) Создать класс функция конструктор которого принимает два параметра position, salary, 
+        // также создать одно private поле positions = ['software developer', 'hr manager', 'project manager'], getter(get функция)!
+        // которая смотрит на поле positions, и если в position есть одно из перечисленных то возвращает true иначе false
+				class Prog {
+				#position = ['software developer', 'hr manager', 'project manager']
+			   
+				constructor(position, salary){
+					this.#position = position;
+					this.salary = salary;
+				}
+
+
+				get positions(){
+					if(this.position = 'software developer' || 'hr manager' || 'project manager'){ return "true"}
+					return "false"
+				}
+				
+			}
+			 
+			let prog1 = new Prog('software developer',2000)
+			#position = [];
+			addToArray(value){
+				this.#arr.push(value);
+			}
+		
+        
+		//2) Есть класс App! Добавить две функции одна из них устанавливает product(создает поле product обьект с полем name, price), вторая функция получает price 
+        // и одно статическое свойство yearOfIssue
+				class App {
+						set createProduct(product){
+						this.product= product;
+						}
+								
+					get getPrice(){
+					return this.product.price;
+					}
+
+					static yearOfIssue = 2020;
+				}
+       
+        // 3) Пишем свой split и join))!
+       function split(stroka, separator) {
+			let res = [];
+			for(let i=0; i<stroka.length; i++){
+			if(stroka[i] != separator){
+					res.push(stroka[i])
+				}
+			}
+		return res;
+		}
+			split('1231351432',3)
+			(7) ["1", "2", "1", "5", "1", "4", "2"]
+
+        function join(arr, sep) {
+			let stroka = '';
+				for(let i=0;i<arr.length;i++){
+					stroka = i!==arr.length-1 ? stroka + arr[i] + sep : stroka + arr[i]
+				}            
+			return stroka;
+			}
+        // 4) Ну и на последок перепишем класс в вид самовыз функция которая возвращает функцию-конструктор
+        class NewApp {
+            constructor(object) {
+                this.object = object;
+            }
+            getObject() {
+                return object;
+            }
+        }
+		
+		
+		const newApp = (function(){
+				function newApp(object){
+				this.object = object;
+				}
+				return newApp;
+			})()
+        let app = new newApp(12)
+		app
+		newApp {object: 12}
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

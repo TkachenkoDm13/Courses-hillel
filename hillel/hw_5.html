@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <script>
+        // ЗАДАНИЯ ДЛЯ РАЗМИНКИ!!!!!!)))
+
+        //1) Есть массив cо строк, взять только те у которых есть символы g и a в подстроке, порядок не важен
+        const arrayOfStrings = ['qe', 'gdag', 'gga', 'gtrxa', 'hghh', 'ga']
+
+
+        // 2) Через цикл создать числа фибоначи! То есть на выходе получаем массив с чисел фибоначи, 15 чисел не больше. 
+        // можно попробовать через рекурсию как эдвансед.
+       function fib(n) {
+			 var a = 1, b = 1, n=15
+			 for (var i = 3; i <= n; i++) {
+				var c = a + b;
+				a = b;
+				b = c;
+			 }    
+			return b;
+			}
+
+			//console.log( fib(1), fib(2), fib(3),fib(4),fib(5),fib(6),fib(7),fib(8),); 
+
+        // 3) Через рекурсию сумируем все числа в массиве
+        
+		const array = [4, 1, 65, 2, 6, 7, 2, 1, 6];
+			function arraySum(array){
+			var sum = 0;
+			for(var i = 0; i < array.length; i++){
+				sum += array[i];
+				}
+			console.log(sum);
+			}
+			arraySum(array);
+
+			VM712:7 94
+
+			const array = [4, 1, 65, 2, 6, 7, 2, 1, 6];
+				let sum = 0;
+				let i= 0
+				function arraySum(array){
+				sum = sum + array[i];
+				i++;
+
+				arraySum(array);
+				return sum;}
+
+        // 4) Написать функцию которая принимает 2 параметра from и to, и будет считать сумму  всех нечетных чисел и потом среднее арифметическое от этой суммы!
+        // Задачу решить 2-мя способами! Цыклами и рекурсией!
+				function a (start, end)    {
+					if(start%2==0) return a(start +1, end);
+						if(start === end){
+						return end;
+						}
+					return start + a(start+1, end);
+				}
+				a(11,18)
+        // 5) Написать поясниние как будет выполнятся в коллстэке следующий код!
+        function a() {
+            return b();
+        }
+
+        function b() {
+            return c();
+        }
+
+        function c() {
+            return d();
+        }
+        function d() {
+            return 'HELLO';
+        }
+        a();
+		
+					в А вызываем B
+					в B вызываем С
+					в C вызываем D
+					в D возвращаем 'HELLO'
+					и вверх по функциям возвращяем 'HELLO' в А
+					
+					
+    </script>
+</body>
+
+</html>

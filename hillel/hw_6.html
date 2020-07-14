@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        // удалить из строки повторяющиеся символы
+        var first = '1234156117181119999';
+		function del_pov(str) {
+			  var uniq = '';
+			  for (let i = 0; i < str.length; i++) {
+				if (str.lastIndexOf(str[i]) == str.indexOf(str[i])) {
+				  uniq += str[i];
+				}
+			  }
+			  return uniq;
+			}
+			console.log(del_pov('1234156117181119999'));
+			
+			
+			var first = '1234156117181119999';
+				let strToArr = str.split('');
+				let res = strToArr.reduce((prev, curr) => {if(!prev.includes(curr)) return prev+curr;
+				return prev;} ,)
+        
+		// количество слов в строке
+        var second = 'Hi, i am learning javascript';
+			var countWords = second.split(" ").length;
+			console.log(countWords)
+			 5
+
+		// самое длинное слово в строке
+        var third = 'Hi, i am learning javascript';
+			function dlinSlovo(str) {
+				  var strSplit = str.split(' ');
+				  var dlinna = 0;
+				  var slovo;
+				  for(let i = 0; i < strSplit.length; i++){
+					if(strSplit[i].length > dlinna){
+					dlinna = strSplit[i].length;
+					 }
+				  }
+					 for(let j = 1; j < strSplit.length; j++){
+						if(strSplit[j].length > strSplit[j-1].length){
+							slovo = strSplit[j];
+							let temp = slovo;
+							console.log(temp);
+								}
+						}
+
+				  return dlinna;
+				}
+			dlinSlovo("Hi, i am learning javascript");
+			VM2151:14 am
+			VM2151:14 learning
+			VM2151:14 javascript
+			10
+		
+		// удалить пробелы в строке
+        var fourth = 'Hi, i am learning javascript';
+        ( str.replace(/\s/g, '') );
+		
+		// заменить пробелы на зяпятые
+        var fifth = 'Hi, i am learning javascript';
+        ( str.replace(/\s/g, ',') );
+		// Отфильтровать массив таким образом чтобы числа были не меньше 20 используя фильтр!
+        var sixth = [3, 42, 234, 5, 3, 21, 53];
+        sixth.filter((curr) => {
+			return curr>=20
+			})
+			(4) [42, 234, 21, 53]
+		
+		// Вернуть новый массив из строк добавив слово месяц если к элементу если число больше 20 используя map
+        // [3, '42 месяца', '23 месяца', 5, 3, '21 месяца', '53 месяца']
+        var seventh = [3, 42, 23, 5, 3, 21, 53];
+        seventh.map ((curr)=> {
+			if(curr>20){
+			return curr+" Месяца"
+			}return curr;
+			})
+			(7) [3, "42 Месяца", "23 Месяца", 5, 3, "21 Месяца", "53 Месяца"]
+		
+		// используя reduce просуммировать элементы которые больше 3
+        var eight = [3, 42, 23, 5, 3, 21, 53];
+		eight.reduce ((prev, curr)=> {
+			if(curr>3){
+			return res+=curr
+			}return res;
+			},0 )
+        
+		// Используя редьюс в массиве nine найти 21
+        var nine = [3, 42, 23, 5, 3, 21, 53];
+			nine.reduce ((prev, curr) => {
+			if(curr === 21) return "21_"
+			return prev;
+			}, 0 )
+			"21_"
+        // Используя редьюса определить все ли элементы больше 5 если да то вернуть тру иначе фолс
+        var ten = [5, 42, 23, 5, 31, 21, 53];
+				ten.reduce ((prev, curr) =>{
+				if(curr < 5 )    return 'true'
+				return 'false'
+				},0)
+				"false"
+        // Ипользуя map перемножить все нечетные елементы на 2, а четные так и оставить
+        eleven.map((curr)=> {
+			if (curr%2!==0) return curr*2;
+			return curr;})
+			(7) [12, 42, 46, 130, 352, 42, 2]
+
+    </script>
+</body>
+
+</html>

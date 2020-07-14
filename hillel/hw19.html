@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <script>
+        // ЗАДАНИЯ ДЛЯ РАЗМИНКИ!!!!!!)))
+
+        //1) Есть две функции конструктор! Нужно c помощью prototype сделать second родителем first!
+        function A(name) {
+            this.name = name;
+        }
+        function B(lastName) {
+            this.lastName = lastName;
+        }
+        const first = new A('Sergei');
+        const second = new B('Shakhov');
+			
+			first.__proto__ = second;
+        //2) Есть обьекты. Необходимо сделать vasia родителем для petia, а petia для boria.
+        // ТО есть вася отец все отцов 
+        const vasia = { m: 23};
+        const petia = { n: 2};
+        const boria = { q: 2};
+		petia.__proto__ = vasia;
+		boria.__proto__ = petia;
+			
+			boria
+					{q: 2}
+						q: 2
+						__proto__:
+							n: 2
+							__proto__:
+								m: 23
+								__proto__:
+								constructor: ƒ Object()
+
+        //3) Написать класс Product, который принимает три поля цена, название, количество. 
+        // Необходимо реализовать два метода, первый сравнивает два продукта и выводит строку
+        // в которой присутствует разница по цене и количеству. Второй метод принимает любое количество продуктов и возвращает общую цену.
+
+class Product {
+    constructor(price, name, quantity){
+        this.price = price;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+   difference(firstElem, secondElem){
+        if(firstElem.price > secondElem.price) {
+           let diff = firstElem.price - secondElem.price;
+            return "firstElem дороже secondElem на" + ' ' +  diff }
+            else{
+                let negDiff = secondElem.price - firstElem.price
+                return "secondElem дороже firstElem на" + ' ' + negDiff
+                }   
+            }
+}
+с.difference(c, b)
+"firstElem дороже secondElem на 350"
+
+let a = new Product(200, 'First', 100)
+let b = new Product(100, 'second', 50)
+let c = new Product(500, 'third', 250)
+
+
+        // 4) Необходимо написать класс, который принимает следующие поля
+        // name, lastName, age, quantity, salary, position, далее реализовываем методы на получение всех свойств.
+        // , пишем геттер, сеттер и что-там еще). 
+        
+        
+        // но если вы дочитали до этого момента то 4-е реализововать не нужно), а нужно сделать следующее.
+        //  встать со стула!....... делаем легенькую разминочку, и начинаем приседать ибо дз проверяться не будет). 20 раз достаточно). 
+        // и после этого скидываем мне дз.
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+    </script>
+</body>
+
+</html>
